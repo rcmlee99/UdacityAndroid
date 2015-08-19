@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.accenture.udacity0" >
 
+    <!-- Added permission to support network access. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,13 +21,27 @@
         </activity>
         <activity
             android:name="com.accenture.udacity1.MovieActivity"
-            android:label="@string/title_activity_movie" >
+            android:label="@string/title_activity_movie"
+            android:parentActivityName="MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.accenture.udacity1.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName="com.accenture.udacity1.MovieActivity">
+        </activity>
+
+        <!-- Settings Activity Placeholder -->
+        <activity
+            android:name="com.accenture.udacity1.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.accenture.udacity1.MovieActivity">
+        </activity>
+
     </application>
 
 </manifest>

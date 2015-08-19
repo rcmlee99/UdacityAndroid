@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="My Nanodegree App"
+        android:text="My Demo Apps"
         android:id="@+id/textView0"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
