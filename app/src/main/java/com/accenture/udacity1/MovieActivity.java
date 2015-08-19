@@ -65,3 +65,4 @@ public class MovieActivity extends ActionBarActivity {
         }
     }
 }
+

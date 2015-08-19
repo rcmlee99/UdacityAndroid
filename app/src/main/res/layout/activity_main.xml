@@ -17,14 +17,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spotify Streamer"
+        android:text="Movie Streamer"
         android:id="@+id/button0"
         android:background="#ffff9837"
         android:layout_below="@+id/textView0"
         android:layout_marginTop="20dp"
         android:layout_alignEnd="@+id/textView0"
         android:layout_alignStart="@+id/textView0"
-        android:onClick="sendMessage"/>
+        android:onClick="launchPopularMovie"/>
 
     <Button
         android:layout_width="wrap_content"

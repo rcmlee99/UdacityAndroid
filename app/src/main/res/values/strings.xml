@@ -4,4 +4,17 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_movie">MovieActivity</string>
+
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_detail">Movie Details</string>
+
+    <string name="placeholder">Placeholder</string>
+    <string name="some_date">2015-06-12</string>
+    <string name="para">Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.</string>
+
+    <string name="release_date_label"> Release Date: </string>
+    <string name="vote_count_label"> Votes: </string>
+    <string name="vote_count">000000</string>
+    <string name="vote_average_label"> Avg: </string>
+    <string name="vote_average">00.00</string>
 </resources>

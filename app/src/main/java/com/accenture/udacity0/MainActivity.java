@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Toast;
 import android.widget.Button;
 
+import com.accenture.udacity1.MovieActivity;
+
 public class MainActivity extends ActionBarActivity {
 
     @Override
@@ -48,6 +50,12 @@ public class MainActivity extends ActionBarActivity {
         String buttonText = b.getText().toString();
         Toast.makeText(MainActivity.this, String.format("This button will launch %s", buttonText), Toast.LENGTH_SHORT).show();
 
+    }
+
+    public void launchPopularMovie(View view){
+
+        Intent intent = new Intent(this, MovieActivity.class);
+        startActivity(intent);
     }
 
 }
