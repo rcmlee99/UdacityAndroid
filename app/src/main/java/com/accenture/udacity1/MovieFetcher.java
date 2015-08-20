@@ -18,49 +18,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-/**
- * A convenience class to make calls on the remote MovieDB API
- * <p/>
- * To view documentation see
- * http://docs.themoviedb.apiary.io/#reference/discover/discovermovie
- * <p/>
- * ---- REQUEST FORMAT -----
- * To get a list of genres use BaseURL
- * https://api.themoviedb.org/3/genre/movie/list
- * <p/>
- * To get a list of movies use BaseURL
- * https://api.themoviedb.org/3/discover/movie?
- * and add further filter/sort parameters as useful e.g.,
- * sort_by=popularity.desc OR vote_average.desc
- * <p/>
- * To any request, always append API key
- * api_key=<your-api-key-here>
- * <p/>
- * If you get paginated results, add the following to get specific page of results
- * page=<number>
- * <p/>
- * ----- RESPONSE FORMAT ----
- * For movie discovery:
- * {
- * page: <page-number>
- * total_pages: <number>
- * total_resuls: <number>
- * results: [ <result> ]
- * }
- * where each result contains "Movie" data in json format (see Movie class below)
- * <p/>
- * ----- CURRENT LIMITATION ---
- * Currently we fetch and show only 1 page of results (20 Movies).
- * TODO: when we refactor to move to using CursorLoader, we can have the
- * SyncAdapter retrieve and maintain more data in SQLite and use
- * CursorAdapter to dynamically retrieve matching query results as they
- * occur...
- * <p/>
- * -- About AsyncTask<input-args, progress-update, result>
- * We pass in a single String input (the sort-order)
- * We currently are not tracking progress updates
- * We expect the result to be an array of Movie objects
- */
 public class MovieFetcher
         extends AsyncTask<String, Void, Movie[]> {
 
@@ -75,7 +32,7 @@ public class MovieFetcher
     // To fetch data for specific movie, append ID to this URL (with api key as usual)
     final static String MOVIE_BASE_URL = "https://api.themoviedb.org/3/movie/";
 
-    // TODO: find a way to hide the API key in source
+    // TODO: hide the API Key in github
     final static String apiKey = "40c8f036a867325df1c404df6d75a41d";
 
     // Maintain handle to adapter (to notify it when new data is fetched)
@@ -93,7 +50,6 @@ public class MovieFetcher
     // Helper to craft URI for making server calls
     private String buildUri(String sortOrder, int page) {
 
-        //TODO: check if sortOrder is a valid string? (no, right now we control usage)
         if (sortOrder == null || sortOrder.isEmpty())
             sortOrder = this.context.getResources().getString(R.string.pref_sort_default);
 

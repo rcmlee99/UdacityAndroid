@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.text.method.ScrollingMovementMethod;
 
 import com.squareup.picasso.Picasso;
 
@@ -39,12 +40,18 @@ public class DetailActivityFragment extends Fragment {
             this.movie = intent.getExtras().getParcelable(Movie.class.getSimpleName());
 
             Log.i(LOG_TAG, "Movie Data is: "+this.movie.voteCount);
-            //TODO: Adopt ViewHolder
+
             // R.id.movieImage
             ((TextView) rootView.findViewById(R.id.movieTitleText)).setText(this.movie.title);
             ((TextView) rootView.findViewById(R.id.movieRelease)).setText(this.movie.releaseDate);
-            ((TextView) rootView.findViewById(R.id.movieOverview)).setText(this.movie.overview);
-            ((TextView) rootView.findViewById(R.id.voteAvg)).setText(Double.toString(this.movie.voteAverage));
+
+            TextView textview= ((TextView) rootView.findViewById(R.id.movieOverview));
+            textview.setText(this.movie.overview);
+            textview.setVerticalScrollBarEnabled(true);
+            textview.setLines(10);
+            //textview.setMovementMethod(ScrollingMovementMethod.getInstance());
+
+            ((TextView) rootView.findViewById(R.id.voteAvg)).setText(Double.toString(this.movie.voteAverage)+"/10");
 
             ImageView iview = (ImageView) rootView.findViewById(R.id.movieImage);
             Picasso.with(getActivity())

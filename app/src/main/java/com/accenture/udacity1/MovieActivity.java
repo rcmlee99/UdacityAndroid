@@ -16,8 +16,6 @@ public class MovieActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie);
-
-        // TODO: Support handling of savedInstanceState
     }
 
     @Override

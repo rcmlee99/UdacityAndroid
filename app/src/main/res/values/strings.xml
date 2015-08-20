@@ -9,7 +9,7 @@
 
     <string name="placeholder">Placeholder</string>
     <string name="some_date">2015-06-12</string>
-    <string name="para"></string>
+    <string name="para">Movie paragraph</string>
 
     <string name="release_date_label"> Release: </string>
     <string name="vote_count_label"> Rating: </string>

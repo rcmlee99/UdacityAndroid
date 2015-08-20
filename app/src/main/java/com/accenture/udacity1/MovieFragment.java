@@ -44,8 +44,6 @@ public class MovieFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //TODO: Anything we want to handle from savedInstanceState?
-        //   for now, we know data is updated in onStart so we don't
         setHasOptionsMenu(true);
     }
 
@@ -77,29 +75,12 @@ public class MovieFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * onCreateView() called next -- sets up the visible View elements for Fragment
-     *   - first, we create the GridView here
-     *   - then, we create a MovieGridAdapter for the current context
-     *   - last, we bind the View to the adapter
-     *
-     * We are implementing Master-Detail flows so clicking a gridView item should launc
-     * the associated Detail Activity. By making the Movie (data object) class Parcelable
-     * we can pass the entire Detail record to the Detail Activity via an Intent Extra
-     *
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
-     * @return
-     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_movie, container, false);
 
-        // TODO: should we init adapter in constructor?
-        // (we need it for updateMovies, which is called from menu option handler too)
         GridView gridView = (GridView) rootView.findViewById(R.id.gridview_movie);
         movieAdapter = new MovieGridAdapter(getActivity());
         gridView.setAdapter(movieAdapter);

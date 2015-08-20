@@ -1,87 +1,66 @@
 
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.github.nitya.popularmovies.DetailFragment">
+    tools:context="com.accenture.udacity1.DetailActivityFragment">
 
     <TextView
-        android:id="@+id/movieTitleText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/placeholder"
-        android:textColor="@color/text_color"
-        android:background="@color/dark_primary_color"
-        android:textSize="@dimen/detail_text_size"
+        android:id="@+id/movieTitleText"
+        android:padding="10dp"
+        android:textColor="@color/white_color"
         android:textStyle="bold"
-        android:gravity="center"
-        android:fontFamily="sans-serif"
-        android:padding="@dimen/detail_padding"
-        android:layout_alignParentTop="true" />
+        android:textSize="@dimen/detail_text_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#29a89e"
+        android:visibility="visible" />
 
     <ImageView
-        android:id="@+id/movieImage"
-        android:layout_width="match_parent"
+        android:layout_width="140dp"
         android:layout_height="@dimen/poster_height"
-        android:adjustViewBounds="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/movieImage"
         android:layout_below="@id/movieTitleText"
-        android:src="@drawable/placeholder" />
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/placeholder"
+        android:visibility="visible" />
 
-    <LinearLayout
-        android:gravity="center_horizontal"
-        android:layout_below="@+id/movieImage"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
+        <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/dark_primary_color"
-        android:id="@+id/linearLayout">
-
-        <TextView
-            android:id="@+id/movieReleaseLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/release_date_label"
-            android:textSize="@dimen/detail_text_size"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"
-            android:textColor="@color/accent_color"
-            android:padding="@dimen/detail_padding" />
-
-        <TextView
-            android:id="@+id/movieRelease"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/some_date"
-            android:textSize="@dimen/detail_text_size"
-            android:fontFamily="sans-serif"
-            android:padding="@dimen/detail_padding"
-            android:textColor="@color/text_color"
-            android:layout_marginRight="28dp" />
-
-        <TextView
-            android:id="@+id/voteAvgLabel"
-            android:text="@string/vote_average_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/detail_text_size"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"
-            android:textColor="@color/accent_color"
-            android:padding="@dimen/detail_padding"
-            android:paddingLeft="32dp"/>
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/some_date"
+        android:id="@+id/movieRelease"
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+        android:layout_alignTop="@+id/movieImage"
+        android:layout_toRightOf="@+id/movieImage"
+        android:visibility="visible" />
 
         <TextView
             android:id="@+id/voteAvg"
             android:text="@string/vote_average"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/detail_text_size"
-            android:fontFamily="sans-serif"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/text_color"
-            android:padding="@dimen/detail_padding"/>
+            android:layout_below="@+id/movieRelease"
+            android:layout_alignLeft="@+id/movieRelease"
+            android:layout_alignStart="@+id/movieRelease"
+            android:visibility="visible"/>
 
-    </LinearLayout>
 
     <TextView
         android:id="@+id/movieOverview"
@@ -90,14 +69,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/para"
-        android:textColor="@color/dark_primary_color"
-        android:fontFamily="sans-serif"
-        android:textSize="@dimen/detail_para_size"
+        android:textColor="@color/text_color"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:padding="@dimen/detail_para_padding"
-        android:layout_below="@+id/linearLayout"
+        android:layout_below="@+id/movieImage"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-
+        android:layout_alignParentStart="true"
+        android:editable="false" />
 
 </RelativeLayout>

@@ -42,17 +42,7 @@ public class MovieGridAdapter extends BaseAdapter {
         return position;
     }
 
-    /**
-     * Describes how to generate the View for the specified position of the data set.
-     *  position = index with the bound dataset
-     *  convertView = old view for reuse (if it exists)
-     *  parent = parent view that this view attaches to (typically ViewGroup)
-     *
-     * @param position
-     * @param convertView
-     * @param parent
-     * @return
-     */
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView view;
@@ -70,8 +60,8 @@ public class MovieGridAdapter extends BaseAdapter {
         Movie data = this.movies.get(position);
         Picasso.with(myContext)
                 .load(data.getImageUrl(null))
-//                .placeholder(R.drawable.placeholder)
-//                .error(R.drawable.error)
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.error)
                 .fit()
                 .noFade()
                 .into(view);

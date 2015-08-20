@@ -12,31 +12,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * A convenience class for containing data returned from the MovieFetcher API
- *  MovieFetcher JSON format:
- *    {
- *      adult        : false,
- *      backdrop_path: "/o4I5sHdjzs29hBWzHtS2MKD3JsM.jpg",
- *      genre_ids    : [ 878, 28, 53, 12 ],
- *      id           : 87101,
- *      original_language: "en",
- *      original_title : "Terminator Genisys",
- *      overview       : "The year is 2029. John Connor, leader of the resistance continues the war against the machines. At the Los Angeles offensive, John's fears of the unknown future begin to emerge when TECOM spies reveal a new plot by SkyNet that will attack him from both fronts; past and future, and will ultimately change warfare forever.",
- *      release_date   : "2015-07-01",
- *      poster_path    : "/5JU9ytZJyR3zmClGmVm9q4Geqbd.jpg",
- *      popularity     : 64.077523,
- *      title          : "Terminator Genisys",
- *      video          : false,
- *      vote_average   : 6.4,
- *      vote_count     : 223
- *    }
- *
- *    Important Attributes:
- *      id
- *      title
- *
- */
 public class Movie implements Parcelable {
 
     // Parcel Keys
@@ -235,31 +210,7 @@ public class Movie implements Parcelable {
 
     };
 
-    /**
-     * Create Movie object from JSON data
-     *
-     {
-     adult: false,
-     backdrop_path: "/dkMD5qlogeRMiEixC4YNPUvax2T.jpg",
-     genre_ids: [
-     28,
-     12,
-     878,
-     53
-     ],
-     id: 135397,
-     original_language: "en",
-     original_title: "Jurassic World",
-     overview: "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
-     release_date: "2015-06-12",
-     poster_path: "/uXZYawqUsChGSj54wcuBtEdUJbh.jpg",
-     popularity: 73.703834,
-     title: "Jurassic World",
-     video: false,
-     vote_average: 7,
-     vote_count: 1034
-     }
-     */
+
     public static Movie parseJSON(JSONObject data) throws JSONException {
         Movie m = new Movie();
         m.adult = data.getBoolean(PK_ADULT) || false;
@@ -275,7 +226,7 @@ public class Movie implements Parcelable {
         m.originalLanguage = data.getString(PK_ORIGINAL_LANGUAGE);
         m.originalTitle = data.getString(PK_ORIGINAL_TITLE);
         m.overview = data.getString(PK_OVERVIEW);
-        m.releaseDate = data.getString(PK_RELEASE_DATE);
+        m.releaseDate = "Release: " + data.getString(PK_RELEASE_DATE);
         m.posterPath = data.getString(PK_POSTER_PATH);
         m.popularity = data.getDouble(PK_POPULARITY);
         m.title = data.getString(PK_TITLE);
