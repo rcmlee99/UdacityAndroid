@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.accenture.udacity0" >
+    package="com.accenture.udacity0">
 
     <!-- Added permission to support network access. -->
     <uses-permission android:name="android.permission.INTERNET" />

@@ -9,8 +9,9 @@
 
     <string name="placeholder">Placeholder</string>
     <string name="some_date">2015-06-12</string>
-    <string name="para">Movie paragraph</string>
-
+    <!--<string name="para">Lorem Ipsum adalah text contoh digunakan didalam industri pencetakan dan typesetting. Lorem Ipsum telah menjadi text contoh semenjak tahun ke 1500an, apabila pencetak yang kurang terkenal mengambil sebuah galeri cetak dan merobakanya menjadi satu buku spesimen. Ia telah bertahan bukan hanya selama lima kurun, tetapi telah melonjak ke era typesetting elektronik, dengan tiada perubahan ketara. Ia telah dipopularkan pada tahun 1960an dengan penerbitan Letraset yang mebawa kangungan Lorem Ipsum, dan lebih terkini dengan sofwer pencetakan desktop seperti Aldus PageMaker yang telah menyertakan satu versi Lorem Ipsum. Berbeza dari pendapat umum yang popular, Lorem Ipsum bukan karya text secara rambang. Ia menpunyai asal usul dari secebis sastera klasik Latin dari kurun 45 TM (Tahum Masihi) , menjadikan ia karya berusia lebih 2000 tahun. Richard McClintock, seorang professor bahasa di Latin di Hampden-Sydney College in Virginia, USA, telah menyelidik salah satu ayat Latin yang kurang difahami, "consectetur" dan dalam menelitikan pengunaan perkataan ini dalam karya klasikal, telah menjumpai asal perkataan "consectetur" ini. Lorem Ipsum berasal dari seksyen 1.10.32 dan 1.10.33 karya "de Finibus Bonorum et Malorum" (Kebaikan dan Kejahan Yang Ekstrim) oleh Cicero, ditulis pada 45 SM. Buku ini ialah satu peniliitian tentang teori etika, dan amat popular pada zaman Renaissance. Ayat pertama Lorem Ipsum, "Lorem ipsum dolor sit amet..", datangnya dari ayat terkadung didalam seksyen 1.10.32. Sejumlah text seragam Lorem Ipsum yang digunakan semenjak 1500an di terbitkan di bawah ini untuk mereka yang berminat. Seksyen 1.10.32 dan 1.10.33 from "de Finibus Bonorum et Malorum" oleh Cicero juga disertakan seperti kandungan asal, dan disusuli dengan versi Inggeris semenjak tahun 1914, yang di terjemah oleh H. Rackham.</string>-->
+    <!-- -->
+    <string name="para">Movie Paragraph</string>
     <string name="release_date_label"> Release: </string>
     <string name="vote_count_label"> Rating: </string>
     <string name="vote_count">000000</string>

@@ -32,14 +32,17 @@ public class DetailActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView =  inflater.inflate(R.layout.fragment_detail, container, false);
+
+        //return inflater.inflate(R.layout.fragment_detail2, container, false);
+
+        View rootView =  inflater.inflate(R.layout.fragment_detail2, container, false);
 
         // Inspect trigger Intent for Detail values.
         Intent intent = getActivity().getIntent();
         if (intent != null && intent.hasExtra(Movie.class.getSimpleName())) {
             this.movie = intent.getExtras().getParcelable(Movie.class.getSimpleName());
 
-            Log.i(LOG_TAG, "Movie Data is: "+this.movie.voteCount);
+            Log.i(LOG_TAG, "Movie Data is: " + this.movie.voteCount);
 
             // R.id.movieImage
             ((TextView) rootView.findViewById(R.id.movieTitleText)).setText(this.movie.title);
@@ -48,10 +51,9 @@ public class DetailActivityFragment extends Fragment {
             TextView textview= ((TextView) rootView.findViewById(R.id.movieOverview));
             textview.setText(this.movie.overview);
             textview.setVerticalScrollBarEnabled(true);
-            textview.setLines(10);
-            //textview.setMovementMethod(ScrollingMovementMethod.getInstance());
+            textview.setMovementMethod(ScrollingMovementMethod.getInstance());
 
-            ((TextView) rootView.findViewById(R.id.voteAvg)).setText(Double.toString(this.movie.voteAverage)+"/10");
+            ((TextView) rootView.findViewById(R.id.voteAvg)).setText(Double.toString(this.movie.voteAverage) + "/10");
 
             ImageView iview = (ImageView) rootView.findViewById(R.id.movieImage);
             Picasso.with(getActivity())
@@ -63,6 +65,20 @@ public class DetailActivityFragment extends Fragment {
                     .into(iview);
         }
 
+
         return rootView;
     }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+    }
+
 }

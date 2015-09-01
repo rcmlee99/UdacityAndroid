@@ -33,7 +33,7 @@ public class MovieFetcher
     final static String MOVIE_BASE_URL = "https://api.themoviedb.org/3/movie/";
 
     // TODO: hide the API Key in github
-    final static String apiKey = "";
+    final static String apiKey = "40c8f036a867325df1c404df6d75a41d";
 
     // Maintain handle to adapter (to notify it when new data is fetched)
     private MovieGridAdapter myAdapter = null;
